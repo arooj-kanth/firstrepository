@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+body{
+  min-height: 100vh;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+  color: aqua;
+  font-size: 30px;
+  border: 4px solid aqua;
+  padding: 15px 65px;
+  position: relative;
+  z-index: 2;
+font-weight: 900;
+  overflow: hidden;
+transition: all 1s;
+}
+a:hover{
+  color: black;
+  text-shadow: 8px 15px 10px black;
+}
+a::before{
+  content: '';
+  /* border: 3px solid black; */
+  background-color:  red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 300%;
+  width: 100%;
+  z-index: -1;
+
+/*  using transfomr orign we can set the  axis pt */
+  transform-origin: bottom left;
+
+transform: rotate(-45deg) translateY(-150px);
+transition: all 1s;
+}
+a:hover::before{
+  transform: rotate(-45deg) translateY(0px);
+}
+a::after{
+  content: '';
+  /* border: 3px solid black; */
+  background-color:  rgb(13, 210, 85);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 300%;
+  width: 200%;
+  z-index: -1;
+  transform-origin: top right;
+  transition: all 1s;
+
+transform: rotate(-45deg) translateY(-170px);
+}
+a:hover::after{
+  transform: rotate(-45deg) translateY(-310px);
+}
+  </style>
+</head>
+<body>
+  
+<a href="#">ASSIGN HERE</a>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            border: 5px solid red;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .one{
+            border: 2px solid black;
+            height: 80px;
+            width: 100px;
+            font-size: 40px;
+            text-align: center;
+        }
+        .one-1{
+            /* order: 3; */
+            flex-grow: 1;
+        }
+        .one-2{
+            /* order: 1; */
+            flex-grow: 1;
+        }
+        .one-3{
+            /* order: 2; */
+            flex-grow: 10;
+        }
+        .one-4{
+            /* order: 4; */
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="main">
+    <div class="one one-1">1</div>
+    <div class="one one-2">2</div>
+    <div class="one one-3">3</div>
+    <div class="one one-4">4</div>
+</div>
+
+</body>
+</html>

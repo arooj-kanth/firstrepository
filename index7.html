@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            /* border: 5px solid blue; */
+            width: 30%;
+            height: 250px;
+            perspective: 200px;
+   
+         position: relative;
+        }
+        .cardpiece{
+            /* border: 3px solid aqua; */
+            height: 100%;
+            width: 100%;
+          backface-visibility: hidden;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .front{
+            background-color: yellow;
+            transition: all 2s;
+        }
+        .card:hover .front{
+            transform: rotateY(-180deg);
+        }
+        .back{
+            background-color: lightgreen;
+            transform: rotateY(180deg);
+            transition: all 2s;
+        }
+        .card:hover .back{
+            transform: rotateY(0deg);
+        }
+        .cardpiece>img{
+            height: 100%;
+            width: 100%;
+            
+        }
+    </style>
+</head>
+<body>
+    
+<div class="card">
+    <div class="cardpiece front">
+        <img  src="https://images.unsplash.com/photo-1683009427037-c5afc2b8134d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=700&q=60" alt="">
+    </div>
+<div class="cardpiece back">
+    <p style="line-height: 25px; text-align: center; font-weight: 900;">Lorem ipsum dolor sit amet consectetur adipinventore aspernatur accusantium fugiat necessitatibus, asperiores iste? Possimus cum</p>
+</div>
+</div>
+
+</body>
+</html>
